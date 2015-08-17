@@ -5,7 +5,11 @@ sap.ui.define(
     [
 		'sap/ui/core/mvc/Controller'
     ],
+<<<<<<< HEAD
+  
+=======
 
+>>>>>>> 8892f8fb0dc9e970fadcfecc21126c77a772de64
     function (CoreController) {
 			var Controller = CoreController.extend('view.View1');
 			

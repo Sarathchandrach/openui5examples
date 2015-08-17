@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.ux3,sap.m,sap.ui.commons,sap.ui.table,sap.viz"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{"Testing": "./"}'
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		
+				<script>
+/*				sap.ui.localResources("view");
+				var app = new sap.m.App({initialPage:"idView1"});
+				var page = sap.ui.view({id:"idView1", viewName:"CustomView.view.View1", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				app.placeAt("content");*/
+ var myData= {
+            user:[{id:"1",firstname:"x",lastname:"k"},
+                  {id:"2",firstname:"y",lastname:"kalita"},
+                  {id:"3",firstname:"z",lastname:"kalita"}],
+            expense:[{expenseno:"1",uid:"1",item:"c",amount:"1500"},
+                     {expenseno:"2",uid:"2",item:"t",amount:"1150"},
+                     {expenseno:"3",uid:"3",item:"p",amount:"500"},
+                     {expenseno:"4",uid:"1",item:"y",amount:"1000"},
+                     {expenseno:"5",uid:"2",item:"t",amount:"3500"},
+                     {expenseno:"6",uid:"3",item:"s",amount:"3500"},
+                     {expenseno:"7",uid:"1",item:"q",amount:"900"}],
+
+    };
+    var oModel = new sap.ui.model.json.JSONModel();
+    oModel.setData(myData);
+    sap.ui.getCore().setModel(oModel);
+    // user table
+    var oTable = new sap.ui.table.DataTable({
+        title : "Users",
+        width : "100%",
+        visibleRowCount : 3,
+        selectionMode : sap.ui.table.SelectionMode.Single,
+        editable : false
+    });
+    oTable.addColumn(new sap.ui.table.Column({
+        label: new sap.ui.commons.Label({text: "User ID"}),
+        template: new sap.ui.commons.TextField({value:"{id}"})
+    }));
+    oTable.addColumn(new sap.ui.table.Column({
+        label: new sap.ui.commons.Label({text: "First Name"}),
+        template: new sap.ui.commons.TextField({value:"{firstname}"})
+    }));
+    oTable.addColumn(new sap.ui.table.Column({
+        label: new sap.ui.commons.Label({text: "Last Name"}),
+        template: new sap.ui.commons.TextField({value:"{lastname}"})
+    }));
+    oTable.bindRows("/user");
+    oTable.placeAt("content");
+
+
+    // expense table
+    var oTable2 = new sap.ui.table.DataTable({
+        title : "Expense",
+        width : "100%",
+        visibleRowCount : 5,
+        selectionMode : sap.ui.table.SelectionMode.Single,
+        editable : false
+    });
+
+    oTable2.addColumn(new sap.ui.table.Column({
+        label: new sap.ui.commons.Label({text: "User Id"}),
+        template: new sap.ui.commons.TextField({value:"{uid}"})
+    }));
+
+    oTable2.addColumn(new sap.ui.table.Column({
+        label: new sap.ui.commons.Label({text: "Expense No"}),
+        template: new sap.ui.commons.TextField({value:"{expenseno}"})
+    }));
+
+    oTable2.addColumn(new sap.ui.table.Column({
+        label: new sap.ui.commons.Label({text: "Items"}),
+        template: new sap.ui.commons.TextField({value:"{item}"})
+    }));
+
+    oTable2.addColumn(new sap.ui.table.Column({
+        label: new sap.ui.commons.Label({text: "Amount"}),
+        template: new sap.ui.commons.TextField({value:"{amount}"})
+    }));
+    oTable2.bindRows("/expense");
+    oTable2.placeAt("content1");
+
+    // bar graph
+    var dataset = new sap.viz.ui5.data.FlattenedDataset({
+        dimensions : [ {
+            axis : 1,
+            name :"Item",
+            value : "{item}"
+        }],
+
+        measures : [ {
+            name :"Amount",
+            value : "{amount}"
+        } ],
+
+        data : {
+            path : "/expense",
+            //filters : how to filter on the basis of row selected on first table,
+        }
+    });
+
+    var column = new sap.viz.ui5.Column({
+        width : "95%",
+        height : "400px",
+        showLegend : false,
+        plotArea : {
+        //'colorPalette' : d3.scale.category20().range()
+        },
+        title : {
+            visible : true,
+            text : "Item vs Amount"
+        },
+        dataset : dataset
+    });
+    column.placeAt("content2");
+
+
+    oTable.attachRowSelect(function(oEvent){
+        // get the binding context of the first selected row
+        var selectedRowContext = oEvent.getParameter("rowContext");
+        var selectedUserId = oModel.getProperty("id", selectedRowContext);
+
+            // filter expenses
+            var listBinding = oTable2.getBinding();
+            var oFilter = new sap.ui.model.Filter("uid", sap.ui.model.FilterOperator.EQ, selectedUserId);
+            listBinding.filter([oFilter]);
+
+            var datasetBinding = dataset.getBinding("data");
+            var oFilter2 = new sap.ui.model.Filter("uid", sap.ui.model.FilterOperator.EQ, selectedUserId);
+            datasetBinding.filter([oFilter2]);
+            // how to filter graph                  
+    });				
+		</script>
+	</head>
+	<body class="sapUiBody" role="application">
+    <div id="content"></div>
+    <div id="content1"></div>
+    <div id="content2"></div>
+	</body>
+</html>
