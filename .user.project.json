@@ -1,0 +1,36 @@
+{
+  "run": [
+    {
+      "filePath": "/openui5examples/UploadCollectionDemo/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 7317971,
+        "displayName": "New Web Application 1"
+      }
+    },
+    {
+      "filePath": "/openui5examples/CustomListItemDemo/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 4297655,
+        "displayName": "New Web Application"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<mvc:View
+  height="100%"
+  controllerName="view.View1"
+  xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page showHeader="false">
+  <content>
+    <UploadCollection id="UploadCollection" maximumFilenameLength="55" multiple="true" change="onChange" fileDeleted="onFileDeleted" fileRenamed="onFileRenamed" fileSizeExceed="onFileSizeExceed" typeMissmatch="onTypeMissmatch" uploadComplete="onUploadComplete" items="{oAppView>/modelData/attachments}">
+        <items>
+            <UploadCollectionItem contributor="{oAppView>contributor}" documentId="{oAppView>documentId}" fileName="{oAppView>fileName}" fileSize="{oAppView>fileSize}" mimeType="{oAppView>mimeType}" thumbnailUrl="{oAppView>thumbnailUrl}" uploadedDate="{oAppView>uploadedDate}" url="{oAppView>url}" enableEdit="{oAppView>enableEdit}" enableDelete="{oAppView>enableDelete}" /> 
+       </items>
+            </UploadCollection>
+    </content>
+  </Page>
+</mvc:View>
