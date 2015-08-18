@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.ui.commons"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{"sc": "./"}'
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		
+		<script>
+/*				sap.ui.localResources("view");
+				var app = new sap.m.App({initialPage:"idcustom"});
+				var page = sap.ui.view({id:"idcustom", viewName:"sc.view.custom", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				app.placeAt("content");*/
+	var myControl = sap.ui.core.Control.extend("myControl",
+		{
+			metadata : {
+				properties : {
+
+				},
+				aggregations : {
+					content : {
+						type : "sap.ui.core.Control",
+						multiple : true, 
+						singularName: 'content' },
+				},
+				events : {
+	
+				}
+			},
+			init : function() {
+
+			},
+			onBeforeRendering : function(oEvent) {
+
+			},			
+			onAfterRendering : function(oEvent) {
+
+			},
+			renderer : function(oRm, oControl) {
+		        oRm.write("<div> ");
+		        var aContent = oControl.getContent() || [];
+	            aContent.forEach(function (oContent) {
+	                oRm.renderControl(oContent);
+	            });
+		        oRm.write("</div>");
+			}
+		});
+		var oButton1 = new sap.ui.commons.Button({
+			tooltip : "This is a test tooltip",
+			press : function() {alert('Alert from ' + oButton1.getText());}
+		});
+		oButton1.bindProperty("text","appView>lastName");
+	//Define some sample data 
+	var aData = [
+		{lastName: "Dente"},
+		{lastName: "Friese"},
+		{lastName: "Mann"},
+		{lastName: "Schutt"},
+		{lastName: "Open"},
+		{lastName: "Dewit"},
+		{lastName: "Zar"},
+		{lastName: "Burr"},
+		{lastName: "Hughes"}
+	];
+		var aData1 = [
+		{lastName: "sarath"},
+		{lastName: "sarte"},
+		{lastName: "Manasdfan"},
+		{lastName: "Schuasdfasdftt"},
+		{lastName: "Opasdfsadfen"},
+		{lastName: "sdaf"},
+		{lastName: "Zaasdfr"},
+		{lastName: "Buasdfrr"},
+		{lastName: "dsf"}
+	];
+			//Create a model and bind the table rows to this model
+		var oModel = new sap.ui.model.json.JSONModel();
+		oModel.setData({modelData: aData});
+		var oModel1 = new sap.ui.model.json.JSONModel();
+		oModel1.setData({modelData: aData1});
+		//sap.ui.getCore().setModel("appView", oModel);
+		fnRecievedHandler = function (oEvent) {
+                jQuery.sap.log.info("Model changed successfully");
+        };
+		var mParameters = {
+                model : "appView",
+                path : "appView>/modelData",
+                template : oButton1,
+                events: {change : fnRecievedHandler}
+        };
+        var testControl = new myControl();
+        testControl.setModel(oModel, "appView");
+        
+        testControl.bindAggregation("content", mParameters);
+
+        testControl.setModel(oModel1, "appView");
+
+		testControl.placeAt("content");
+		</script>
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

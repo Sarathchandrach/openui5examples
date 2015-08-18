@@ -1,0 +1,31 @@
+{
+  "run": [
+    {
+      "filePath": "/SampleControlDemo/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "sap-ui-debug",
+          "paramValue": "true",
+          "paramActive": true
+        },
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        }
+      ],
+      "hashParameter": "",
+      "_metadata": {
+        "id": 5454966,
+        "runnerId": "webapprunner",
+        "displayName": "New Web Application 3"
+      }
+    }
+  ]
+}
