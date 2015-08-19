@@ -1,35 +1,30 @@
 {
   "run": [
     {
-      "filePath": "/openui5examples/UploadCollectionDemo/index.html",
+      "filePath": "/openui5examples/SampleControlDemo/index.html",
       "previewMode": 0,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
       "ui5ActiveVersion": null,
       "ui5VerSource": null,
       "isDefaultVersion": 0,
-      "urlParameters": [],
+      "urlParameters": [
+        {
+          "paramName": "sap-ui-debug",
+          "paramValue": "true",
+          "paramActive": true
+        },
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        }
+      ],
       "hashParameter": "",
       "_metadata": {
+        "id": 9775442,
         "runnerId": "webapprunner",
-        "id": 7317971,
-        "displayName": "New Web Application 1"
-      }
-    },
-    {
-      "filePath": "/openui5examples/CustomListItemDemo/index.html",
-      "previewMode": 0,
-      "dataMode": 1,
-      "workspace": "withoutWorkspace",
-      "ui5ActiveVersion": null,
-      "ui5VerSource": null,
-      "isDefaultVersion": 0,
-      "urlParameters": [],
-      "hashParameter": "",
-      "_metadata": {
-        "runnerId": "webapprunner",
-        "id": 4297655,
-        "displayName": "New Web Application"
+        "displayName": "New Web Application 3"
       }
     }
   ]
