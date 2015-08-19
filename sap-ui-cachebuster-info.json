@@ -1,15 +1,18 @@
 {
-  "BarGraphDemo/index.html": "1439840572000",
-  "CustomListItemDemo/index.html": "1439586688000",
-  "README.md": "1439929390000",
   "SampleControlDemo/index.html": "1439928264000",
+  "README.md": "1439929390000",
   "CustomListItemDemo/view/customView.controller.js": "1439836494000",
   "CustomListItemDemo/view/customView.view.xml": "1439588539000",
+  "CustomListItemDemo/index.html": "1439586688000",
   "UploadCollectionDemo/view/View1.controller.js": "1439841315000",
   "UploadCollectionDemo/view/View1.view.xml": "1439841315000",
   "UploadCollectionDemo/index.html": "1439836707000",
   "BarGraphDemo/view/custom.controller.js": "1439839398000",
   "BarGraphDemo/view/custom.view.xml": "1439839398000",
+  "BarGraphDemo/index.html": "1439840572000",
   "SampleControlDemo/view/custom.controller.js": "1439923118000",
-  "SampleControlDemo/view/custom.view.xml": "1439923118000"
+  "SampleControlDemo/view/custom.view.xml": "1439923118000",
+  "FilterBarDemo/view/filterbar.controller.js": "1440000208000",
+  "FilterBarDemo/view/filterbar.view.xml": "1439999824000",
+  "FilterBarDemo/index.html": "1439999381000"
 }

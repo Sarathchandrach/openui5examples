@@ -1,0 +1,53 @@
+<mvc:View
+  height="100%"
+  controllerName="view.filterbar"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:fb="sap.ui.comp.filterbar"
+  xmlns:l="sap.ui.layout"
+  xmlns="sap.m">  
+  <l:VerticalLayout width="100%">
+    <Label text="FilterBar"/>
+    <fb:FilterBar id="idFilterBar" reset="onReset" search="onSearch" showRestoreOnFB="true" showClearOnFB="true" showRestoreButton="true" showClearButton="true">
+      <fb:filterItems>
+        <fb:FilterItem name="A" label="labelA">
+          <fb:control>
+            <Input type="Text"/>
+          </fb:control>        
+        </fb:FilterItem>
+        
+        <fb:FilterItem name="B" label="labelB" labelTooltip="Tooltip Example" mandatory="true">
+          <fb:control>
+            <Input type="Text"/>
+          </fb:control>        
+        </fb:FilterItem>        
+      </fb:filterItems>
+      
+      <fb:filterGroupItems>
+        <fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="A" label="labelA" labelTooltip="Tooltip GroupItem Example">
+          <fb:control>
+            <Input type="Text"/>
+          </fb:control>        
+        </fb:FilterGroupItem>
+        
+        <fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="B" label="labelB">
+          <fb:control>
+            <Input type="Text"/>
+          </fb:control>        
+        </fb:FilterGroupItem>        
+        
+        <fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="A2" label="labelA2" labelTooltip="Tooltip GroupItem Example">
+          <fb:control>
+            <Input type="Text"/>
+          </fb:control>        
+        </fb:FilterGroupItem>
+        
+        <fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="B2" label="labelB2">
+          <fb:control>
+            <Input type="Text"/>
+          </fb:control>        
+        </fb:FilterGroupItem>          
+      </fb:filterGroupItems>        
+          
+      </fb:FilterBar>    
+  </l:VerticalLayout>
+</mvc:View>

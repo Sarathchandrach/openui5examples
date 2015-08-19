@@ -1,7 +1,7 @@
 {
   "run": [
     {
-      "filePath": "/openui5examples/SampleControlDemo/index.html",
+      "filePath": "/FilterBarDemo/index.html",
       "previewMode": 0,
       "dataMode": 1,
       "workspace": "withoutWorkspace",
@@ -22,9 +22,9 @@
       ],
       "hashParameter": "",
       "_metadata": {
-        "id": 9775442,
+        "id": 4709000,
         "runnerId": "webapprunner",
-        "displayName": "New Web Application 3"
+        "displayName": "New Web Application"
       }
     }
   ]
