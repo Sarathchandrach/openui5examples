@@ -1,0 +1,27 @@
+.spacerTop {
+    margin-top: 2rem;
+}
+.sap-tablet .sapMDialog,
+.sap-desktop .sapMDialog {
+    min-width: 18rem;
+}
+.sapMMessageDialog {
+    width: 18rem;
+}
+.SCBarChart div {
+	font: 10px sans-serif;
+	background-color: steelblue;
+	text-align: right;
+	padding: 3px;
+	margin: 1px;
+	color: white;
+}
+.SCBarChart rect {
+  fill: steelblue;
+}
+
+.SCBarChart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}

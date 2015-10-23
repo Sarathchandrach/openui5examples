@@ -1,0 +1,62 @@
+{
+  "run": [
+    {
+      "filePath": "/BarChart1/webapp/test/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "sap-ui-debug",
+          "paramValue": "true",
+          "paramActive": true
+        },
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [],
+      "destBackendSystem": [],
+      "_metadata": {
+        "id": 2875657,
+        "runnerId": "webapprunner",
+        "displayName": "New Web Application 1"
+      }
+    },
+    {
+      "filePath": "/BarChart1/webapp/test/index.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [
+        {
+          "paramName": "sap-ui-debug",
+          "paramValue": "true",
+          "paramActive": true
+        },
+        {
+          "paramName": "",
+          "paramValue": "",
+          "paramActive": false
+        }
+      ],
+      "hashParameter": "",
+      "backendSystem": [],
+      "destBackendSystem": [],
+      "_metadata": {
+        "id": 8870796,
+        "runnerId": "webapprunner",
+        "displayName": "New Web Application"
+      }
+    }
+  ]
+}

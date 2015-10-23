@@ -1,0 +1,15 @@
+{
+  "webapp/view/barView.view.xml": "1445637234000",
+  "webapp/controller/barView.controller.js": "1445628348000",
+  "webapp/css/style.css": "1445636632000",
+  "webapp/test/index.html": "1445628348000",
+  "webapp/i18n/i18n.properties": "1445628348000",
+  "webapp/model/models.js": "1445628348000",
+  "webapp/manifest.json": "1445628348000",
+  "webapp/Component.js": "1445628348000",
+  "webapp/controls/BarChart2.js": "1445636581000",
+  "webapp/controls/data.tsv": "1445635496000",
+  "webapp/controls/BarChart3.js": "1445639272000",
+  "webapp/controls/BarChart1.js": "1445637227000",
+  "webapp/controls/data3.tsv": "1445638115000"
+}

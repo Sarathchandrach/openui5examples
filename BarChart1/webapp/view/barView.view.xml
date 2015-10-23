@@ -1,0 +1,15 @@
+<core:View controllerName="sarath.controller.barView" 
+		   xmlns:core="sap.ui.core" 
+		   xmlns:html="http://www.w3.org/1999/xhtml"
+		   xmlns:mvc="sap.ui.core.mvc" 
+		   xmlns="sap.m"
+		   xmlns:sc = "sarath.controls"
+		   xmlns:sd = "sarath.controller">
+		   
+	<Page title="{i18n>title}">
+		<content>
+			<sc:BarChart width="100%" height="100%"></sc:BarChart>
+			<sd:BarChart width="100%" height="100%"></sd:BarChart>
+		</content>
+	</Page>
+</core:View>
